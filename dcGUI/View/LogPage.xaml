@@ -1,0 +1,37 @@
+﻿<Page x:Class="LogWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:dcGUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="500">
+    <Page.DataContext>
+        <local:LogViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ToolBar Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
+                <Button
+                    ToolTip="Обновить лог"
+                    Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                    Command="{Binding RenewButtonClicked}">
+                    <Image Source="/Icons/renew.png"/>
+                </Button>
+                <Button
+                    ToolTip="Удалить лог"
+                    Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                    Command="{Binding ClearButtonClicked}">
+                    <Image  Source="/Icons/clear.png"/>
+                </Button>
+            </StackPanel>
+        </ToolBar>
+        <ScrollViewer Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <TextBox IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Text="{Binding LogText}"/>
+        </ScrollViewer>
+    </Grid>
+</Page>

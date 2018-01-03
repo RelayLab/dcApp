@@ -1,0 +1,41 @@
+﻿<Page x:Class="dcPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:dcGUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="500">
+    <Page.DataContext>
+        <local:JobsViewModel/>
+    </Page.DataContext>
+    <Grid Name="Grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ToolBar Grid.Row="0" Height="24" x:Name="ToolBar" >
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" Name="ToolbarStack">
+                <local:DropDownButton/>
+                <!--<local:UserDropDown/>-->
+                <ComboBox Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}"
+                          ItemsSource="{Binding MaxThreadsList}"
+                          SelectedItem="{Binding MaxThreadsCount}"
+                          ToolTip="Максимальное количество параллельных тредов" />
+                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"/>
+                <TextBox Text="{Binding ServerName}" Style="{StaticResource {x:Static ToolBar.TextBoxStyleKey}}"/>
+            </StackPanel>
+        </ToolBar>
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding ElementaryJobs, Mode=OneWay}" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="№" Width="*" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Название" Width="*" Binding="{Binding Name}"/>
+                    <DataGridTextColumn Header="В работе?" Width="*" Binding="{Binding IsProcessing}"/>
+                    <DataGridTextColumn Header="Сделана?" Width="*" Binding="{Binding IsDone}"/>
+                    <DataGridTextColumn Header="Выполняется на..." Width="*" Binding="{Binding ClientName}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        
+        
+    </Grid>
+</Page>

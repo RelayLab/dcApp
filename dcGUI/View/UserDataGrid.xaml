@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="UserDataGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <DataGrid  AutoGenerateColumns="False" ItemsSource="{Binding FilePathsList}">
+        <DataGrid.Resources>
+            <RoutedCommand x:Key="ChoosePath"/>
+        </DataGrid.Resources>
+        <DataGrid.CommandBindings>
+            <CommandBinding
+                    Command="{StaticResource ChoosePath}"
+                    Executed="ChoosePath_Executed"/>
+        </DataGrid.CommandBindings>
+        <DataGrid.Columns>
+            <DataGridTemplateColumn  Header="Названия вариантов" Width="*">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=VariantsNamesPath}" Height="18" FontSize="10" Padding="3"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+                        <DockPanel LastChildFill="True">
+                            <Button Content="..." FontSize="10" DockPanel.Dock="Right" Command="{StaticResource ChoosePath}" CommandTarget="{Binding ElementName=TargetText}" Height="18" Width="18"/>
+                            <TextBox Text="{Binding VariantsNamesPath, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" Name="TargetText" Height="18" FontSize="10"/>
+                        </DockPanel>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn  Header="Содержание вариантов" Width="*">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=VariantsPath}" Height="18" FontSize="10" Padding="3"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+                        <DockPanel LastChildFill="True">
+                            <Button Content="..." FontSize="10" DockPanel.Dock="Right" Command="{StaticResource ChoosePath}" CommandTarget="{Binding ElementName=TargetText}" Height="18" Width="18"/>
+                            <TextBox Text="{Binding VariantsPath, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" Name="TargetText" Height="18" FontSize="10"/>
+                        </DockPanel>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn  Header="Контр. величины" Width="*">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=MonitoredValuesPath}" Height="18" FontSize="10" Padding="3"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+                        <DockPanel LastChildFill="True">
+                            <Button Content="..." FontSize="10" DockPanel.Dock="Right" Command="{StaticResource ChoosePath}" CommandTarget="{Binding ElementName=TargetText}" Height="18" Width="18"/>
+                            <TextBox Text="{Binding MonitoredValuesPath, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" Name="TargetText" Height="18" FontSize="10"/>
+                        </DockPanel>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn  Header="Режим" Width="*">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=AdditionalInfo}" Height="18" FontSize="10" Padding="3"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+                        <DockPanel LastChildFill="True">
+                            <Button Content="..." FontSize="10" DockPanel.Dock="Right" Command="{StaticResource ChoosePath}" CommandTarget="{Binding ElementName=TargetText}" Height="18" Width="18"/>
+                            <TextBox Text="{Binding AdditionalInfo, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" Name="TargetText" Height="18" FontSize="10"/>
+                        </DockPanel>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn  Header="Сохранять в..." Width="*">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=SavePath}" Height="18" FontSize="10" Padding="3"/>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+                <DataGridTemplateColumn.CellEditingTemplate>
+                    <DataTemplate>
+                        <DockPanel LastChildFill="True">
+                            <Button Content="..." FontSize="10" DockPanel.Dock="Right" Command="{StaticResource ChoosePath}" CommandTarget="{Binding ElementName=TargetText}" Height="18" Width="18"/>
+                            <TextBox Text="{Binding SavePath, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" Name="TargetText" Height="18" FontSize="10"/>
+                        </DockPanel>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellEditingTemplate>
+            </DataGridTemplateColumn>
+        </DataGrid.Columns>
+    </DataGrid>
+</UserControl>

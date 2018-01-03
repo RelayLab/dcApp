@@ -1,0 +1,83 @@
+vbnc ./main.vb ./ClientLogic.vb ./LocalLogic.vb ./ClientInfo.vb ./ServerLogic.vb	 -out:make_jobs.exe -r:dcUser.dll -libpath:../dcUser/
+Visual Basic.Net Compiler version 0.0.0.5943 (Mono 4.6 - master/6474d66)
+Copyright (C) 2004-2010 Rolf Bjarne Kvinge. All rights reserved.
+
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (57,39) : error VBNC90019: Expected ')'.
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (57,39): Compiler error around this location, the compiler hasn't implemented the error message, nor error recovery, so the compiler will probably crash soon.
+  at vbnc.Helper.ErrorRecoveryNotImplemented (vbnc.Span Location) [0x00019] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseInvocationOrIndexExpression (vbnc.ParsedObject Parent, vbnc.Expression First) [0x0006d] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseIdentifier (vbnc.ExpressionParseInfo Info) [0x00989] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseExponent (vbnc.ExpressionParseInfo Info) [0x00002] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseUnaryPlusMinus (vbnc.ExpressionParseInfo Info) [0x0005a] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseMultDiv (vbnc.ExpressionParseInfo Info) [0x00002] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseIntDiv (vbnc.ExpressionParseInfo Info) [0x00002] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseMod (vbnc.ExpressionParseInfo Info) [0x00002] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParsePlusMinus (vbnc.ExpressionParseInfo Info) [0x00002] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseConcat (vbnc.ExpressionParseInfo Info) [0x00002] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseBitshift (vbnc.ExpressionParseInfo Info) [0x00002] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseComparison (vbnc.ExpressionParseInfo Info) [0x00002] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseNot (vbnc.ExpressionParseInfo Info) [0x0002b] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseAnd_AndAlso (vbnc.ExpressionParseInfo Info) [0x00002] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseOr_OrElse_Xor (vbnc.ExpressionParseInfo Info) [0x00002] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseExpression (vbnc.ExpressionParseInfo Info) [0x00006] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseCodeBlock (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x001fb] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseForEachStatement (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x00100] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseCodeBlock (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x00e9c] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseIfStatement (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x000ed] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseCodeBlock (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x00bc2] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseSubDeclaration (vbnc.TypeDeclaration Parent, vbnc.ParseAttributableInfo Info) [0x000e7] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseTypeMembers (vbnc.TypeDeclaration Parent) [0x004ae] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseModuleDeclaration (vbnc.ParsedObject Parent, vbnc.Attributes Attributes, System.String Namespace) [0x0008f] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseTypeDeclaration (vbnc.ParsedObject Parent, vbnc.Attributes Attributes, System.String Namespace) [0x000c6] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseAssemblyMembers (vbnc.AssemblyDeclaration Parent, System.String RootNamespace) [0x00212] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseAssemblyDeclaration (System.String RootNamespace, vbnc.AssemblyDeclaration assembly) [0x000af] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.Parse (System.String RootNamespace, vbnc.AssemblyDeclaration assembly) [0x00006] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Compiler.Compile_Parse () [0x00084] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Compiler.Compile () [0x002e0] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Compiler.Compile (System.String[] CommandLine) [0x00063] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Main.Main (System.String[] CmdArgs) [0x0001f] in <34e2f263fc914993b6029ed1915e3193>:0 
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (57,39) : error VBNC90019: Expected 'Next'.
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (57,39): Compiler error around this location, the compiler hasn't implemented the error message, nor error recovery, so the compiler will probably crash soon.
+  at vbnc.Helper.ErrorRecoveryNotImplemented (vbnc.Span Location) [0x00019] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseForEachStatement (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x0014c] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseCodeBlock (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x00e9c] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseIfStatement (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x000ed] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseCodeBlock (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x00bc2] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseSubDeclaration (vbnc.TypeDeclaration Parent, vbnc.ParseAttributableInfo Info) [0x000e7] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseTypeMembers (vbnc.TypeDeclaration Parent) [0x004ae] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseModuleDeclaration (vbnc.ParsedObject Parent, vbnc.Attributes Attributes, System.String Namespace) [0x0008f] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseTypeDeclaration (vbnc.ParsedObject Parent, vbnc.Attributes Attributes, System.String Namespace) [0x000c6] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseAssemblyMembers (vbnc.AssemblyDeclaration Parent, System.String RootNamespace) [0x00212] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseAssemblyDeclaration (System.String RootNamespace, vbnc.AssemblyDeclaration assembly) [0x000af] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.Parse (System.String RootNamespace, vbnc.AssemblyDeclaration assembly) [0x00006] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Compiler.Compile_Parse () [0x00084] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Compiler.Compile () [0x002e0] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Compiler.Compile (System.String[] CommandLine) [0x00063] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Main.Main (System.String[] CmdArgs) [0x0001f] in <34e2f263fc914993b6029ed1915e3193>:0 
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (57,39): Compiler error around this location, the compiler hasn't implemented the error message, nor error recovery, so the compiler will probably crash soon.
+  at vbnc.Helper.ErrorRecoveryNotImplemented (vbnc.Span Location) [0x00019] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseForEachStatement (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x001a1] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseCodeBlock (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x00e9c] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseIfStatement (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x000ed] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseCodeBlock (vbnc.ParsedObject Parent, System.Boolean IsOneLiner) [0x00bc2] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseSubDeclaration (vbnc.TypeDeclaration Parent, vbnc.ParseAttributableInfo Info) [0x000e7] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseTypeMembers (vbnc.TypeDeclaration Parent) [0x004ae] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseModuleDeclaration (vbnc.ParsedObject Parent, vbnc.Attributes Attributes, System.String Namespace) [0x0008f] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseTypeDeclaration (vbnc.ParsedObject Parent, vbnc.Attributes Attributes, System.String Namespace) [0x000c6] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseAssemblyMembers (vbnc.AssemblyDeclaration Parent, System.String RootNamespace) [0x00212] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.ParseAssemblyDeclaration (System.String RootNamespace, vbnc.AssemblyDeclaration assembly) [0x000af] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Parser.Parse (System.String RootNamespace, vbnc.AssemblyDeclaration assembly) [0x00006] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Compiler.Compile_Parse () [0x00084] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Compiler.Compile () [0x002e0] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Compiler.Compile (System.String[] CommandLine) [0x00063] in <34e2f263fc914993b6029ed1915e3193>:0 
+  at vbnc.Main.Main (System.String[] CmdArgs) [0x0001f] in <34e2f263fc914993b6029ed1915e3193>:0 
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (57,39) : error VBNC90019: Expected 'End'.
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (57,39) : error VBNC90019: Expected 'End'.
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (58,40) : error VBNC90019: Expected 'End'.
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (59,42) : error VBNC30203: Identifier expected.
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (60,17) : error VBNC30203: Identifier expected.
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (61,15) : error VBNC30203: Identifier expected.
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (62,12) : error VBNC30203: Identifier expected.
+/home/user/elve/dcApp/process_jobs/ServerLogic.vb (63,11) : error VBNC30203: Identifier expected.
+There were 10 errors and 0 warnings.
+Compilation took 00:00:00.4132980
